@@ -1,5 +1,6 @@
 package com.mjc.web;
 
+import cn.hutool.db.Page;
 import com.mjc.common.Constants;
 import com.mjc.common.IdUtils;
 import com.mjc.common.R;
@@ -37,6 +38,7 @@ public class CaptchaController {
         if (!captchaResp.getCaptchaOnOff()){
             return R.failed(captchaResp);
         }
+
 
         //生成uuid
         String uuid = IdUtils.simpleUUID();
