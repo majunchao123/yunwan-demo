@@ -38,8 +38,11 @@ public class UserServiceImpl implements UserDetailsService {
         //2.判断密码是否正确
         String encode = passwordEncoder.encode("123456");
         //3.返回用户对象
-
         return new User("131",encode, AuthorityUtils.commaSeparatedStringToAuthorityList("admin,normal"));
+
+
+
+
 
     }
 }

@@ -41,6 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //放行失败页面
                 .antMatchers("/error.html").permitAll()
                 .antMatchers("/image/**.*").permitAll()
+                .antMatchers("/main1.html").hasAuthority("admin")
                 //所有请求都必须被认证（登录）
                 .anyRequest().authenticated();
         //关闭防护
